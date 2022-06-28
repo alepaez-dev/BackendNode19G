@@ -29,6 +29,12 @@ const nombres = [
   "Marco",
   "Israel",
   "Annie",
+  "Ërnesto",
+  "Francisco",
+  "Lenny",
+  "Rod",
+  "Noemi",
+  "Benjamin",
 ];
 
 const nombresMenores = nombres.filter(nombre => {
