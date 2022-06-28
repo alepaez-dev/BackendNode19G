@@ -9,9 +9,12 @@
   - Comandos terminal linux
   - Aliases
   - Introducción a Node(Historia, que es, etc)
+  
 * Clase 2
   - NPM (Node Package Manager)
-  - File System
-  - API
-  - Callbacks  
+  - Package Json
+  - Metodos de array
 
+* Clase 3
+  - Filesystem
+  - Callbacks
