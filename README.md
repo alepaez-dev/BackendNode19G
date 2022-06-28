@@ -13,7 +13,7 @@
 * Clase 2
   - NPM (Node Package Manager)
   - Package Json
-  - Metodos de array
+  - REPASO Metodos de array
 
 * Clase 3
   - Filesystem
