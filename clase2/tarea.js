@@ -2,7 +2,7 @@
  * Reduce
  */
 
-// Input
+// Input -> Entrada
  const nombres = [
   "Paco",
   "Lorena",
@@ -29,3 +29,5 @@ const objeto = {
   "Abraham" : 7,
   "Cris" : 4,
 }
+
+const resultado = nombres.reduce((acc, currentValue) => ({...acc, [currentValue]: currentValue.length}), {})
