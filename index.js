@@ -1,7 +1,11 @@
-const colors = require('colors');
+const fs = require("fs")
 
-// Imprimir en consola/terminal, Hola me llamo ${nombre} en arcoiris
-if (process.argv[2] !== undefined) {
-  console.log(`Hola mi nombre es ${process.argv[2]}`.rainbow);
-
+function pako(error) {
+  if(error) {
+    console.log(error)
+    return
+  }
+  console.log("Se escribio exitosamente")
 }
+
+fs.writeFile("ejemplo.txt", "Contenido de ejemplo.txt CONTENIDO NUEVO", "utf8", pako)
