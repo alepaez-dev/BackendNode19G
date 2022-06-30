@@ -44,7 +44,13 @@ setTimeout(() => {
   construir({...muro}, aplanar)
 }, 3000)
 
-const aplanar = (muroAAplanar, pintar) => {
+const aplanar = (error, muroAAplanar, pintar) => {
+  // Logica negativa
+  console.log("error en aplanar", error)
+  if(error) { 
+    console.log("Hay un error", error)
+    return
+  }
   muroAAplanar.estaAplanado = true // -> Paso 2
   pintar(muroAAplanar)
 }
@@ -57,22 +63,18 @@ const pintar = (muroAPintar) => {
 console.log("ya se declaro pintar")
 
 const construir = (muroAConstruir, aplanar) => {
-  let error = null
+  let error = undefined
   muroAConstruir.estaConstruido = false // -> Paso 1
   if(!muroAConstruir.estaConstruido) {
     error = "El muro no fue construido"
-    console.log("error", error)
-    return
   } 
-  aplanar(muroAConstruir, pintar) // -> izq: el resultado del paso pasado, der: la declaracion del paso que sigue
+  aplanar(error, muroAConstruir, pintar) // -> izq: el resultado del paso pasado, der: la declaracion del paso que sigue
 }
-console.log("ya se declaro construit")
+console.log("ya se declaro construir")
 
-
-
-
-// Despues
-
-
-
-// Ese mismo muro, lo necesito aplanar
+/**
+ * Vamos a hacer un pastel
+ * 1 - Preparar la masa
+ * 2 - Hornearla 
+ * 3 - Decorarlo
+ */
