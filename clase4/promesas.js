@@ -41,6 +41,6 @@ const muroConstruidoPromesa = construir({...muro})
 console.log("antes del then y catch", muroConstruidoPromesa)
 
 muroConstruidoPromesa
-.then((muro) => console.log("El muro ya fue construido", muroConstruidoPromesa))
+.then((muro) => console.log("El muro ya fue construido", muro))
 .catch((err) => console.error(err))
 
