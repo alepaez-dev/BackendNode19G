@@ -2,7 +2,7 @@ const fsPromises = require('fs/promises')
 /**
  * 1 - Vamos a escribir un archivo. -> writeFile
  * 2 - Vamos a hacer un append con una linea nueva a este mismo archivo -> appendFile
- * 3 - Vamos el archivo despues de 5s. -> unlink -> setTimeout
+ * 3 - Vamos a borrar el archivo despues de 5s. -> unlink -> setTimeout
  */
 
 const ruta = "archivo-nuevo.txt"
