@@ -71,13 +71,12 @@ const arrowF = async (muro) => {
   //... Aqui hay una promesa
   // await construir(muro) // -> solo la quiero ejecutar
   const muroConstruido = await construir(muro)
-  console.log("muroConstruido", muroConstruido)
   const muroAplanado = await aplanar(muroConstruido)
-  console.log("muroAplanado", muroAplanado)
   const muroPintado = await pintar(muroAplanado)
-  console.log("muroPintado", muroPintado)
-
+  return muroPintado
 }
 
 // Ejecutando nuestra funcion async
 arrowF({...muro})
+.then((muro) => console.log(muro))
+.catch((err) => console.log(err))
