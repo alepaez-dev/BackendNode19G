@@ -1,3 +1,5 @@
+const fs = require("fs/promises")
+
 // Promesas
 /**
  * Status/Estado
@@ -29,18 +31,54 @@ const construir = (muro) => {
       // Ya se resolvio mi promesa
       if(muro.construido){
         resolve(muro) // -> me ahorro return, es un return -> then recibe esto
-      }else {
+      } else {
         reject(new Error("No se pudo construit")) // catch recibe esto
       }
     }, 3000)
   })
 }
 
-const muroConstruidoPromesa = construir({...muro})
+const aplanar = (muro) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      muro.aplanado = false
+      // -> Logica negativa
+      if(!muro.aplanado){ // -> no se cumple
+        reject(console.log("No se pudo aplanar")) // -> re
+        return
+      } 
+      // Continuamos
+      resolve(muro)
+    },3000)
+  })
+}
 
-console.log("antes del then y catch", muroConstruidoPromesa)
+const pintar = (muro) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      muro.pintado = true
+      // -> Logica negativa
+      if(!muro.pintado){ // -> no se cumple
+        reject(new Error("No se pudo pintar"))
+        return
+      } 
+      // Continuamos
+      resolve(muro)
+    },3000)
+  })
+}
 
-muroConstruidoPromesa
-.then((muro) => console.log("El muro ya fue construido", muro))
-.catch((err) => console.error(err))
+construir({...muro})
+  .then((muroConstruido) => {
+    console.log(muroConstruido)
+    aplanar(muroConstruido)
+      .then((muroAplanado) => {
+        console.log(muroAplanado)
+        pintar(muroAplanado)
+          .then((muroPintado) => console.log("exito", muroPintado))
+          .catch((err) => console.log("error", err))
+      })
+      .catch((error) => console.log("error", error))
+  })
+  .catch((error) => console.log("error", error));
 
