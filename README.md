@@ -29,7 +29,7 @@
   
 * Clase 6
   - Endpoints con Node
-  - Primer Express Server
+  - Primer Express Server (https://github.com/alepaez-dev/express-first-server)
   - Insomnia(Interfaz)
   - Endpoints sencillos con Express
   - Manejo de Jsons
