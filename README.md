@@ -18,3 +18,18 @@
 * Clase 3
   - Filesystem
   - Callbacks
+
+* Clase 4
+  - Promesas
+  - Promificacion
+  
+* Clase 5
+  - Async/Await
+  - Prender un servidor con Node básico
+  
+* Clase 6
+  - Endpoints con Node
+  - Primer Express Server
+  - Insomnia(Interfaz)
+  - Endpoints sencillos con Express
+  - Manejo de Jsons
