@@ -1,35 +1,14 @@
-# BackendNode19G
-- Módulo Backend con Node para la gen 19, empieza 23/Jun/22
-- Duración: 3 semanas
+Necesitan crear un API con los siguientes endpoints
 
+- GET /posts
+- GET /posts/:id
+- POST /posts
+- DELETE /post (protegido, solo usuarios con token pueden hacer esto)
+- PATCH /post/:id (protegido)
+- POST /users
+- POST /auth/login
 
-## RoadMap:
-* Clase 1 
-  - Historia de Linux
-  - Comandos terminal linux
-  - Aliases
-  - Introducción a Node(Historia, que es, etc)
-  
-* Clase 2
-  - NPM (Node Package Manager)
-  - Package Json
-  - REPASO Metodos de array
-
-* Clase 3
-  - Filesystem
-  - Callbacks
-
-* Clase 4
-  - Promesas
-  - Promificacion
-  
-* Clase 5
-  - Async/Await
-  - Prender un servidor con Node básico
-  
-* Clase 6
-  - Endpoints con Node
-  - Primer Express Server (https://github.com/alepaez-dev/express-first-server)
-  - Insomnia(Interfaz)
-  - Endpoints sencillos con Express
-  - Manejo de Jsons
+Los requisitos son:
+- Hacer uso de arquitectura limpia para estructurar el proyecto
+- Hacer uso de middlewares para delimitar el acceso de los usuarios
+- Deben conectar su reto de front con su nuevo API
