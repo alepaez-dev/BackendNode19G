@@ -1,4 +1,10 @@
-Necesitan crear un API con los siguientes endpoints
+
+### RETO!! MODULO BACKEND!!
+
+####Necesitan crear un API de dev.to con los siguientes endpoints
+https://dev.to/
+
+Se supone que el frontend ya esta hecho acorde el modulo pasado, aqui hay un ejemplo de como conectar https://github.com/alepaez-dev?tab=repositories
 
 - GET /posts
 - GET /posts/:id
